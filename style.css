@@ -1,0 +1,94 @@
+/* CSS custom dibuat sesedikit mungkin, sisanya pakai class Bootstrap */
+
+/* Variabel warna: ubah di sini, semua ikut berubah */
+:root {
+  --navy: #2a2556;
+  --accent: #e8735a;
+}
+
+html {
+  scroll-behavior: smooth; /* scroll halus saat klik menu */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Mengubah warna tombol Bootstrap dengan menimpa CSS variable bawaannya (Bootstrap 5.3) */
+.btn-primary {
+  --bs-btn-bg: var(--navy);
+  --bs-btn-border-color: var(--navy);
+  --bs-btn-hover-bg: #3d3680;
+  --bs-btn-hover-border-color: #3d3680;
+  --bs-btn-active-bg: #1d1940;
+  --bs-btn-active-border-color: #1d1940;
+}
+
+/* Navbar terang */
+.navbar-portofolio {
+  background-color: #fdf3ee;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 110px 0 3rem; /* atas 110px agar tidak tertutup navbar fixed-top */
+  background: linear-gradient(135deg, #fff8f4, #fdebe2);
+  color: var(--navy);
+}
+
+.hero-label {
+  letter-spacing: .2em;
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.5rem, 11vw, 8rem); /* ukuran menyesuaikan lebar layar */
+  line-height: .95;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  line-height: 1.5;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.hero-signature {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 2.75rem;
+  color: var(--accent);
+  line-height: 1.2;
+}
+
+.hero-photo {
+  max-width: 420px;
+}
+
+.hero-circle {
+  aspect-ratio: 1 / 1; /* selalu persegi, jadi bulat sempurna */
+  background: linear-gradient(160deg, #bba8ec, #f8d3c4);
+}
+
+.hero-stats {
+  background-color: var(--navy);
+}
+
+/* Di laptop, kartu statistik menempel di pojok kanan bawah lingkaran */
+@media (min-width: 992px) {
+  .hero-stats {
+    position: absolute;
+    right: -1.5rem;
+    bottom: 1rem;
+    width: 9rem;
+  }
+}
